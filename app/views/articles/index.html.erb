@@ -1,0 +1,7 @@
+<h2>Enjoy reading the posts</h2>
+<% @article.each do |art| %>
+	<h4><%= art.title.capitalize %></h4>
+<br><br>
+	<%= art.text %>
+<hr>
+<% end %>
