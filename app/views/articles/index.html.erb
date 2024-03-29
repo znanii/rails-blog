@@ -1,7 +1,9 @@
 <h2>Enjoy reading the posts</h2>
-<% @article.each do |art| %>
+<% @articles.each do |art| %>
 	<h4><%= art.title.capitalize %></h4>
 <br><br>
 	<%= art.text %>
+<br><br>
+<%= link_to "Show", article_path(art) %>
 <hr>
 <% end %>
