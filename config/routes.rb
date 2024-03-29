@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   
  get 'home/index'
- get '/terms' => 'terms#index'
-get '/about' => 'about#index'
+
+ get 'pageterms' => 'pages#pageterms'
+ get 'pageabout' => 'pages#pageabout'
+# get '/terms' => 'terms#index' - Это я создада два отдельных контроллера)))0
+#get '/about' => 'about#index'
  
  resource :contacts, only: [:new, :create], path_names: { :new => ''}
  resources :articles
