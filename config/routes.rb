@@ -7,9 +7,10 @@ Rails.application.routes.draw do
 # get '/terms' => 'terms#index' - Это я создада два отдельных контроллера)))0
 #get '/about' => 'about#index'
  
+
  resource :contacts, only: [:new, :create], path_names: { :new => ''}
  resources :articles do
-    resources :comments
+    resources :comments, only: [:create]
   end
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

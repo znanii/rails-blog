@@ -2,7 +2,17 @@
 <br><br>
 	<%= @article.text %>
 <hr>
+<hr>
+<h2>Comments:</h2>
+<% @article.comments.each do |com| %>
+<br>
+<h3><i><%= com.author %> said: </i></h3>
+<%= com.body %>
+<br><br>
+<hr>
+<%end%>
 
+<h2>Add comments</h2>
 <%= form_for ([@article, @article.comments.build]), data: {turbo:false} do |f| %>
 
 <p>
