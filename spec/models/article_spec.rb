@@ -9,5 +9,14 @@ describe Article, type: :model do
   describe "assosiations" do
   it { should have_many(:comments) }
   end
-  
+
+  describe "#subject" do
+    it "returns the article title" do
+      #create article sneaky way
+      article = create(:article, title: 'Lorem Ipsum') 
+
+      # assert - checking
+      expect(article.subject).to eq 'Lorem Ipsum' 
+    end
+  end
 end
