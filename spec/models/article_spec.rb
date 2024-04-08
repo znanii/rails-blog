@@ -19,4 +19,13 @@ describe Article, type: :model do
       expect(article.subject).to eq 'Lorem Ipsum' 
     end
   end
+
+  describe "#last_comment" do
+    it "returns last comment" do
+      #create article WITH comments
+      article = create(:article_with_comments)
+
+      expect(article.last_comment.body).to eq 'vazovski 3'
+    end
+  end
 end
