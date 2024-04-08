@@ -68,4 +68,8 @@ with.test_framework :rspec
 with.library :rails
 end
 end
+
+RSpec.configure do |config|
+  config.include FactoryBot::Syntax::Methods
+end
 end
