@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :article do
-    title { "Article title" }
+    title { "Start summarizing. If you find there’s nothing else you can cut but that you’re still over the 140 character limit, that’s when you start summarizing" }
     text {"Article text" }
 
 
