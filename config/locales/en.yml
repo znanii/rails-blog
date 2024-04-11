@@ -32,3 +32,9 @@ en:
 
   contacts:
     contact_us: "Contact Us!"
+
+  articles:
+    edit_article: "Edit article"
+    index_article: "Enjoy reading the posts!!"
+    new_article: "New article"
+    show: "%{title}"

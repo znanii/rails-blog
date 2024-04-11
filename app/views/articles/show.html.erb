@@ -1,11 +1,11 @@
-<h4><%= @article.title %></h4>
+<h1><%= I18n.t("articles.show", title: @article.title) %></h1>
 <br><br>
 	<%= @article.text %>
 <br>
 Created by: <%= @article.creator %>
 <hr>
 <hr>
-<h2>Comments:</h2>
+<h3>Comments:</h3>
 <% @article.comments.each do |com| %>
 <br>
 <h3><i><%= com.author %> said: </i></h3>
