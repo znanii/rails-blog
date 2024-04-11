@@ -6,11 +6,14 @@
 <br><br>
 	
 	<% if user_signed_in? %>
-	<% art.creator == current_user.username %>
+	<% if art.creator == current_user.username %>
 <%= link_to 'Show', article_path(art) %> |
 <%= link_to 'Edit', edit_article_path(art) %> | 
 <%=link_to 'Delete', article_path(art), data: { 'turbo-method': :delete, 'turbo-confirm': 'Are you sure?' } %>
 	<% else %>
+<%= link_to 'Show', article_path(art) %> 
+<% end %>
+<% else %>
 <%= link_to 'Show', article_path(art) %> 
 <% end %>
 <%#= button_to "Delete", article_path(art), method: :delete %>
